@@ -8,7 +8,7 @@
 
 ## Preview
 
-![weibo-auto-report](https://user-images.githubusercontent.com/50146714/204307053-ba00b774-2b21-4f9d-b0df-0fae6230d663.png)
+<img src="https://user-images.githubusercontent.com/50146714/204307053-ba00b774-2b21-4f9d-b0df-0fae6230d663.png" alt="weibo-auto-report" width="200"/>
 
 ---
 
