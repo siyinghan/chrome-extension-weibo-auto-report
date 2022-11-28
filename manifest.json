@@ -1,0 +1,14 @@
+{
+  "name": "Weibo Auto Report",
+  "description": "Weibo Auto Report",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "permissions": ["scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "64": "icon.png"
+  }
+}
