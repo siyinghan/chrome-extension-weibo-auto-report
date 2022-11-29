@@ -2,6 +2,7 @@ document.querySelector("#wrmm").addEventListener("click", startWRMM);
 document.querySelector("#together1").addEventListener("click", startTogeher1);
 document.querySelector("#together2").addEventListener("click", startTogeher2);
 document.querySelector("#together3").addEventListener("click", startTogeher3);
+document.querySelector("#together4").addEventListener("click", startTogeher4);
 
 function startWRMM() {
   chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
@@ -115,6 +116,41 @@ function startTogeher3() {
       chrome.scripting.executeScript({
         target: { tabId: tabs[0].id },
         func: ydblxw,
+      });
+    }, 7000);
+  });
+}
+
+// Reload and report 带节奏, 宣扬仇恨, and 邪教 orderly.
+function startTogeher4() {
+  chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
+    chrome.tabs.reload(tabs[0].id);
+    setTimeout(() => {
+      chrome.scripting.executeScript({
+        target: { tabId: tabs[0].id },
+        func: djz,
+      });
+    }, 1000);
+  });
+  chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
+    setTimeout(() => {
+      chrome.tabs.reload(tabs[0].id);
+    }, 3000);
+    setTimeout(() => {
+      chrome.scripting.executeScript({
+        target: { tabId: tabs[0].id },
+        func: xych,
+      });
+    }, 4000);
+  });
+  chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
+    setTimeout(() => {
+      chrome.tabs.reload(tabs[0].id);
+    }, 6000);
+    setTimeout(() => {
+      chrome.scripting.executeScript({
+        target: { tabId: tabs[0].id },
+        func: xj,
       });
     }, 7000);
   });
