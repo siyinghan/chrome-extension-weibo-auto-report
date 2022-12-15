@@ -1,8 +1,23 @@
+document.querySelector("#like").addEventListener("click", startLike);
 document.querySelector("#wrmm").addEventListener("click", startWRMM);
 document.querySelector("#together1").addEventListener("click", startTogeher1);
 document.querySelector("#together2").addEventListener("click", startTogeher2);
-document.querySelector("#together3").addEventListener("click", startTogeher3);
-document.querySelector("#together4").addEventListener("click", startTogeher4);
+
+function startLike() {
+  chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
+    chrome.scripting.executeScript({
+      target: { tabId: tabs[0].id },
+      func: like,
+    });
+  });
+}
+
+const like = () => {
+  const like = document.querySelectorAll(".woo-like-iconWrap");
+  for (let i = 1; i < like.length; i++) {
+    like[i].click();
+  }
+};
 
 function startWRMM() {
   chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
@@ -16,14 +31,14 @@ function startWRMM() {
   });
 }
 
-// Reload and report 带节奏, 宣扬仇恨, and 造谣爆料 orderly.
+// Reload and report 宣扬仇恨, 带节奏, 邪教, and 不良价值 orderly.
 function startTogeher1() {
   chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
     chrome.tabs.reload(tabs[0].id);
     setTimeout(() => {
       chrome.scripting.executeScript({
         target: { tabId: tabs[0].id },
-        func: djz,
+        func: xych,
       });
     }, 1000);
   });
@@ -34,7 +49,7 @@ function startTogeher1() {
     setTimeout(() => {
       chrome.scripting.executeScript({
         target: { tabId: tabs[0].id },
-        func: xych,
+        func: djz,
       });
     }, 4000);
   });
@@ -45,90 +60,31 @@ function startTogeher1() {
     setTimeout(() => {
       chrome.scripting.executeScript({
         target: { tabId: tabs[0].id },
-        func: zybl,
+        func: xj,
       });
     }, 7000);
   });
+  chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
+    setTimeout(() => {
+      chrome.tabs.reload(tabs[0].id);
+    }, 9000);
+    setTimeout(() => {
+      chrome.scripting.executeScript({
+        target: { tabId: tabs[0].id },
+        func: bljzdx,
+      });
+    }, 10000);
+  });
 }
 
-// Reload and report 宣扬仇恨, 造谣爆料 and 邪教 orderly.
+// Reload and report 低俗信息 and 色情图文 orderly.
 function startTogeher2() {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.reload(tabs[0].id);
-    setTimeout(() => {
-      chrome.scripting.executeScript({
-        target: { tabId: tabs[0].id },
-        func: xych,
-      });
-    }, 1000);
-  });
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    setTimeout(() => {
-      chrome.tabs.reload(tabs[0].id);
-    }, 3000);
-    setTimeout(() => {
-      chrome.scripting.executeScript({
-        target: { tabId: tabs[0].id },
-        func: zybl,
-      });
-    }, 4000);
-  });
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    setTimeout(() => {
-      chrome.tabs.reload(tabs[0].id);
-    }, 6000);
-    setTimeout(() => {
-      chrome.scripting.executeScript({
-        target: { tabId: tabs[0].id },
-        func: xj,
-      });
-    }, 7000);
-  });
-}
-
-// Reload and report 宣扬仇恨, 造谣爆料 and 诱导不良行为 orderly.
-function startTogeher3() {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.reload(tabs[0].id);
-    setTimeout(() => {
-      chrome.scripting.executeScript({
-        target: { tabId: tabs[0].id },
-        func: xych,
-      });
-    }, 1000);
-  });
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    setTimeout(() => {
-      chrome.tabs.reload(tabs[0].id);
-    }, 3000);
-    setTimeout(() => {
-      chrome.scripting.executeScript({
-        target: { tabId: tabs[0].id },
-        func: zybl,
-      });
-    }, 4000);
-  });
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    setTimeout(() => {
-      chrome.tabs.reload(tabs[0].id);
-    }, 6000);
-    setTimeout(() => {
-      chrome.scripting.executeScript({
-        target: { tabId: tabs[0].id },
-        func: ydblxw,
-      });
-    }, 7000);
-  });
-}
-
-// Reload and report 带节奏, 宣扬仇恨, and 邪教 orderly.
-function startTogeher4() {
   chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
     chrome.tabs.reload(tabs[0].id);
     setTimeout(() => {
       chrome.scripting.executeScript({
         target: { tabId: tabs[0].id },
-        func: djz,
+        func: dsxx,
       });
     }, 1000);
   });
@@ -139,20 +95,9 @@ function startTogeher4() {
     setTimeout(() => {
       chrome.scripting.executeScript({
         target: { tabId: tabs[0].id },
-        func: xych,
+        func: sqtw,
       });
     }, 4000);
-  });
-  chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
-    setTimeout(() => {
-      chrome.tabs.reload(tabs[0].id);
-    }, 6000);
-    setTimeout(() => {
-      chrome.scripting.executeScript({
-        target: { tabId: tabs[0].id },
-        func: xj,
-      });
-    }, 7000);
   });
 }
 
@@ -242,6 +187,54 @@ const ydblxw = () => {
   document.querySelector("[title='涉未成年人']").click();
   // click 诱导不良行为
   document.querySelector("[tag_id='4106']").click();
+  // click 我已阅读
+  document
+    .querySelector("[node-type='readRoleNode']")
+    .children[0].children[2].click();
+  // click 提交 after 0.5s
+  setTimeout(() => {
+    document.querySelector("[node-type='subBtn']").click();
+  }, 500);
+};
+
+// report 不良价值导向
+const bljzdx = () => {
+  // click 不良价值导向
+  document.querySelector("[title='不良价值导向']").click();
+  // click 不良价值导向
+  document.querySelector("[tag_id='4501']").click();
+  // click 我已阅读
+  document
+    .querySelector("[node-type='readRoleNode']")
+    .children[0].children[2].click();
+  // click 提交 after 0.5s
+  setTimeout(() => {
+    document.querySelector("[node-type='subBtn']").click();
+  }, 500);
+};
+
+// report 涉黄信息 -> 低俗信息
+const dsxx = () => {
+  // click 涉黄信息
+  document.querySelector("[title='涉黄信息']").click();
+  // click 低俗信息
+  document.querySelector("[tag_id='202']").click();
+  // click 我已阅读
+  document
+    .querySelector("[node-type='readRoleNode']")
+    .children[0].children[2].click();
+  // click 提交 after 0.5s
+  setTimeout(() => {
+    document.querySelector("[node-type='subBtn']").click();
+  }, 500);
+};
+
+// report 涉黄信息 -> 色情图文
+const sqtw = () => {
+  // click 涉黄信息
+  document.querySelector("[title='涉黄信息']").click();
+  // click 色情图文
+  document.querySelector("[tag_id='204']").click();
   // click 我已阅读
   document
     .querySelector("[node-type='readRoleNode']")

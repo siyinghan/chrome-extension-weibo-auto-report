@@ -2,7 +2,7 @@
 
 1. Load the extension in Chrome.
 2. Open a report page.
-3. Click the buttons to start reporting in different categories.
+3. Click the buttons to start reporting in different categories or like clicking.
 
 ---
 

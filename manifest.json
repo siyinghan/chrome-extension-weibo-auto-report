@@ -3,8 +3,11 @@
   "description": "Weibo Auto Report",
   "version": "0.0.2",
   "manifest_version": 3,
-  "permissions": ["tabs", "scripting"],
-  "host_permissions": ["https://service.account.weibo.com/reportspamobile*"],
+  "permissions": ["tabs", "scripting", "input"],
+  "host_permissions": [
+    "https://service.account.weibo.com/reportspamobile*",
+    "https://weibo.com/detail/*"
+  ],
   "action": {
     "default_popup": "popup.html"
   },
