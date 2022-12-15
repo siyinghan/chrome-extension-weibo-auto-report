@@ -1,10 +1,13 @@
 {
   "name": "Weibo Auto Report",
   "description": "Weibo Auto Report",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 3,
-  "permissions": ["scripting", "tabs"],
-  "host_permissions": ["<all_urls>"],
+  "permissions": ["tabs", "scripting", "input"],
+  "host_permissions": [
+    "https://service.account.weibo.com/reportspamobile*",
+    "https://weibo.com/detail/*"
+  ],
   "action": {
     "default_popup": "popup.html"
   },
