@@ -15,7 +15,9 @@ function startLike() {
 const like = () => {
   const like = document.querySelectorAll(".woo-like-iconWrap");
   for (let i = 1; i < like.length; i++) {
-    like[i].click();
+    setTimeout(() => {
+      like[i].click();
+    }, 500 * i);
   }
 };
 
