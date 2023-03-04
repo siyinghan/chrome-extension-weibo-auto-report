@@ -1,5 +1,5 @@
 body {
-  width: 200px;
+  width: 270px;
   height: 220px;
   display: flex;
   flex-direction: column;
@@ -12,6 +12,8 @@ body {
 
 button {
   align-items: center;
+  float: right;
+  clear: both;
   background-color: #ffe7e7;
   background-position: 0 0;
   border: 1px solid #fee0e0;

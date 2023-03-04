@@ -55,28 +55,28 @@ function startTogeher1() {
       });
     }, 4000);
   });
-  // chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
-  //   setTimeout(() => {
-  //     chrome.tabs.reload(tabs[0].id);
-  //   }, 6000);
-  //   setTimeout(() => {
-  //     chrome.scripting.executeScript({
-  //       target: { tabId: tabs[0].id },
-  //       func: bljzdx,
-  //     });
-  //   }, 7000);
-  // });
-  // chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
-  //   setTimeout(() => {
-  //     chrome.tabs.reload(tabs[0].id);
-  //   }, 9000);
-  //   setTimeout(() => {
-  //     chrome.scripting.executeScript({
-  //       target: { tabId: tabs[0].id },
-  //       func: bljzdx,
-  //     });
-  //   }, 10000);
-  // });
+   chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
+     setTimeout(() => {
+       chrome.tabs.reload(tabs[0].id);
+     }, 6000);
+     setTimeout(() => {
+       chrome.scripting.executeScript({
+         target: { tabId: tabs[0].id },
+         func: bljzdx,
+       });
+     }, 7000);
+   });
+   chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
+     setTimeout(() => {
+       chrome.tabs.reload(tabs[0].id);
+     }, 9000);
+     setTimeout(() => {
+       chrome.scripting.executeScript({
+         target: { tabId: tabs[0].id },
+         func: bljzdx,
+       });
+     }, 10000);
+   });
 }
 
 // Reload and report 低俗信息 and 色情图文 orderly.
@@ -119,21 +119,21 @@ const wrmm = () => {
   }, 500);
 };
 
-// report 带节奏
-// const djz = () => {
-//   // click 违规营销
-//   document.querySelector("[title='违规营销']").click();
-//   // click 标题党、带节奏
-//   document.querySelector("[tag_id='4601']").click();
-//   // click 我已阅读
-//   document
-//     .querySelector("[node-type='readRoleNode']")
-//     .children[0].children[2].click();
-//   // click 提交 after 0.5s
-//   setTimeout(() => {
-//     document.querySelector("[node-type='subBtn']").click();
-//   }, 500);
-// };
+ report 带节奏
+ const djz = () => {
+   // click 违规营销
+   document.querySelector("[title='违规营销']").click();
+   // click 标题党、带节奏
+   document.querySelector("[tag_id='4601']").click();
+   // click 我已阅读
+   document
+     .querySelector("[node-type='readRoleNode']")
+     .children[0].children[2].click();
+   // click 提交 after 0.5s
+   setTimeout(() => {
+     document.querySelector("[node-type='subBtn']").click();
+   }, 500);
+ };
 
 // report 宣扬仇恨
 const xych = () => {
