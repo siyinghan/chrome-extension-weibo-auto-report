@@ -1,5 +1,5 @@
 body {
-  width: 260px;
+  width: 270px;
   height: 220px;
   display: flex;
   flex-direction: column;
@@ -11,6 +11,10 @@ body {
 }
 
 button {
+  /* align to the right */
+  float: right;
+  clear: both;
+  /* align to the right */
   align-items: center;
   background-color: #ffe7e7;
   background-position: 0 0;
