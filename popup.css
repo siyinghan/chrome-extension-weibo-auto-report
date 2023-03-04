@@ -11,9 +11,11 @@ body {
 }
 
 button {
-  align-items: center;
+  /* align to the right */
   float: right;
   clear: both;
+  /* align to the right */
+  align-items: center;
   background-color: #ffe7e7;
   background-position: 0 0;
   border: 1px solid #fee0e0;
