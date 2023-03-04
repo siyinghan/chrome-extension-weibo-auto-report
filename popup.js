@@ -1,7 +1,7 @@
 document.querySelector("#like").addEventListener("click", startLike);
 document.querySelector("#wrmm").addEventListener("click", startWRMM);
-document.querySelector("#together1").addEventListener("click", startTogeher1);
-document.querySelector("#together2").addEventListener("click", startTogeher2);
+document.querySelector("#together1").addEventListener("click", startTogether1);
+document.querySelector("#together2").addEventListener("click", startTogether2);
 
 function startLike() {
   chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
@@ -34,7 +34,7 @@ function startWRMM() {
 }
 
 // Reload and report 宣扬仇恨, 带节奏, 邪教, and 不良价值 orderly.
-function startTogeher1() {
+function startTogether1() {
   chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
     chrome.tabs.reload(tabs[0].id);
     setTimeout(() => {
@@ -51,7 +51,7 @@ function startTogeher1() {
     setTimeout(() => {
       chrome.scripting.executeScript({
         target: { tabId: tabs[0].id },
-        func: bljzdx,
+        func: djz,
       });
     }, 4000);
   });
@@ -62,7 +62,7 @@ function startTogeher1() {
      setTimeout(() => {
        chrome.scripting.executeScript({
          target: { tabId: tabs[0].id },
-         func: bljzdx,
+         func: xj,
        });
      }, 7000);
    });
@@ -80,7 +80,7 @@ function startTogeher1() {
 }
 
 // Reload and report 低俗信息 and 色情图文 orderly.
-function startTogeher2() {
+function startTogether2() {
   chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
     chrome.tabs.reload(tabs[0].id);
     setTimeout(() => {
@@ -119,7 +119,7 @@ const wrmm = () => {
   }, 500);
 };
 
- report 带节奏
+// report 带节奏
  const djz = () => {
    // click 违规营销
    document.querySelector("[title='违规营销']").click();
